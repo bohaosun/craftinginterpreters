@@ -2,6 +2,7 @@
 #include <map>
 
 std::string getTokenTypeName( TokenType type ) {
+  // clang-format off
     static const std::string tokenTypeNames[] = {
         // Single-character tokens.
         "LEFT_PAREN", "RIGHT_PAREN", "LEFT_BRACE", "RIGHT_BRACE",
@@ -22,6 +23,7 @@ std::string getTokenTypeName( TokenType type ) {
 
         "EOF"
     };
+  // clang-format on
 
-    return tokenTypeNames[ static_cast< uint32_t >( type ) ];
+  return tokenTypeNames[ static_cast<uint32_t>( type ) ];
 }

@@ -2,7 +2,7 @@
 
 #include <string>
 
-// use the scoped enum first. May need to change later
+// clang-format off
 enum class TokenType {
   // Single-character tokens.
   LEFT_PAREN, RIGHT_PAREN, LEFT_BRACE, RIGHT_BRACE,
@@ -23,5 +23,6 @@ enum class TokenType {
 
   FILE_END
 };
+// clang-format on
 
 std::string getTokenTypeName( TokenType type );
