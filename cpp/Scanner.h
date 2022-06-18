@@ -9,7 +9,7 @@
 class Scanner {
 public:
   Scanner( const std::string &source );
-  std::vector<Token> scanTokens();
+  std::vector< Token > scanTokens();
 
 private:
   bool isAtEnd();
@@ -31,9 +31,9 @@ private:
   bool isAlphaNum( char c ) { return isAlpha( c ) || std::isdigit( c ); }
 
   std::string source_;
-  std::vector<Token> tokens_;
-  int start_ = 0;
+  std::vector< Token > tokens_;
+  int start_   = 0;
   int current_ = 0;
-  int line_ = 1;
-  std::map<std::string, TokenType> keywords_;
+  int line_    = 1;
+  std::map< std::string, TokenType > keywords_;
 };

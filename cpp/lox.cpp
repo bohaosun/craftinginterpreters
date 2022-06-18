@@ -19,7 +19,7 @@ void error( int line, const std::string &message ) {
 
 void run( const std::string source ) {
   Scanner scanner( source );
-  std::vector<Token> tokens = scanner.scanTokens();
+  std::vector< Token > tokens = scanner.scanTokens();
   for ( Token token : tokens ) {
     std::cout << token.toString() << std::endl;
   }

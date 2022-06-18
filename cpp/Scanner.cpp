@@ -26,7 +26,7 @@ Scanner::Scanner( const std::string &source )
           { "var", TokenType::VAR },
           { "while", TokenType::WHILE } } {}
 
-std::vector<Token> Scanner::scanTokens() {
+std::vector< Token > Scanner::scanTokens() {
   while ( !isAtEnd() ) {
     // We are at the beginning of the next lexeme.
     start_ = current_;

@@ -25,5 +25,5 @@ std::string getTokenTypeName( TokenType type ) {
     };
   // clang-format on
 
-  return tokenTypeNames[ static_cast<uint32_t>( type ) ];
+  return tokenTypeNames[ static_cast< uint32_t >( type ) ];
 }
