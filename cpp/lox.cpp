@@ -21,7 +21,7 @@ void run( const std::string source ) {
   Scanner scanner( source );
   std::vector< Token > tokens = scanner.scanTokens();
   for ( Token token : tokens ) {
-    std::cout << token.toString() << std::endl;
+    std::cout << token << '\n';
   }
 }
 

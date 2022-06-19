@@ -2,18 +2,20 @@
 
 #include "TokenType.h"
 
+#include <iostream>
 #include <string>
 
 class Token {
+
+  friend std::ostream &operator<<( std::ostream &os, const Token &token );
+
 private:
-  TokenType type;
-  std::string lexeme;
-  std::string literal; // use string for now, may need to change later
-  int line;
+  TokenType   type_;
+  std::string lexeme_;
+  std::string literal_; // use string for now, may need to change later
+  int         line_;
 
 public:
   Token( TokenType type, const std::string &lexeme, const std::string &literal, int line );
-
-  std::string toString();
-  // TODO: add ostream support, and remove toString
+  std::string getLexeme() const { return lexeme_; }
 };

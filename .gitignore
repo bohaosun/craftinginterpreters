@@ -19,3 +19,7 @@ xcuserdata/
 
 # scratch place
 /scratch/
+
+# cpp
+cpp/cpplox
+cpp/AstPrinter

@@ -3,8 +3,9 @@
 #include <string>
 
 Token::Token( TokenType type, const std::string &lexeme, const std::string &literal, int line )
-    : type( type ), lexeme( lexeme ), literal( literal ), line( line ) {}
+    : type_( type ), lexeme_( lexeme ), literal_( literal ), line_( line ) {}
 
-std::string Token::toString() {
-  return getTokenTypeName( type ) + " " + lexeme + " " + literal;
+std::ostream &operator<<( std::ostream &os, const Token &token ) {
+  os << getTokenTypeName( token.type_ ) << ' ' << token.lexeme_ << ' ' << token.literal_;
+  return os;
 }
